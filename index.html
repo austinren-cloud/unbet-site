@@ -11,93 +11,169 @@
   <meta property="og:image" content="https://austinren-cloud.github.io/unbet-site/icon.png">
   <link rel="icon" href="icon.png">
   <link rel="apple-touch-icon" href="icon.png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
-<body>
+<body class="landing">
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand brand-logo" href="./"><img src="icon.png" alt="" width="32" height="32">Un<span>bet</span></a>
+    <button class="btn btn-small" type="button" data-join>Join waitlist</button>
+  </div>
+</header>
+
 <main>
-  <a class="brand brand-logo" href="./"><img src="icon.png" alt="" width="36" height="36">Un<span>bet</span></a>
-  <h1>Quit betting.<br>Get your <em>money back.</em></h1>
-  <p class="lead">An iPhone app for quitting sports betting, prediction markets and online gambling. Join the waitlist and we'll email you when it's ready.</p>
+  <section class="hero">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">iPhone app · Coming soon</p>
+        <h1>Quit betting.<br>Get your <em>money back.</em></h1>
+        <p class="lead">See what betting has really cost you, get through the urges, and watch the money you keep add up.</p>
+        <button class="btn btn-large" type="button" id="hero-join" data-join>Join the waitlist</button>
+        <p class="micro">Free to join · Takes 10 seconds</p>
+        <p class="hero-help">Need help right now? Call or text <a href="tel:18006973738">1-800-MY-RESET</a></p>
+      </div>
+      <div class="phone"><img src="screens/reveal.jpg" alt="Unbet showing estimated losses of $31,200 since 2022, about $7,800 a year" width="507" height="1100"></div>
+    </div>
+  </section>
 
-  <section class="card signup" id="signup">
-    <form id="waitlist-form" novalidate>
-      <label class="field-label" for="email">Your email</label>
-      <input id="email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="254" placeholder="you@example.com" required>
+  <section class="section">
+    <div class="wrap narrow">
+      <h2 class="center">From one more bet to money back</h2>
+      <div class="compare">
+        <div class="compare-col">
+          <p class="compare-head">Before</p>
+          <p>Chasing the last loss</p>
+          <p>Dreading your bank app</p>
+          <p>No idea what it's really cost</p>
+          <p>Facing urges on your own</p>
+        </div>
+        <div class="compare-col compare-after">
+          <p class="compare-head">With Unbet</p>
+          <p>A fresh start you can count</p>
+          <p>Money adding up, day by day</p>
+          <p>Your real number, in plain sight</p>
+          <p>A plan for when the urge hits</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <!-- A trap for spam bots: people never see this field, and bots tend to fill it in -->
-      <div class="trap" aria-hidden="true">
-        <label for="website">Leave this empty</label>
-        <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+  <section class="section">
+    <div class="wrap">
+      <div class="split feature">
+        <div>
+          <p class="eyebrow">Your bet profile</p>
+          <h2>Understand your pattern</h2>
+          <p class="lead">Answer a few quick questions to see your betting type, your hardest moments, and what your losses could have paid for instead. No bank login needed.</p>
+        </div>
+        <div class="phone"><img src="screens/profile.jpg" alt="A bet profile showing a typical week, years betting and hardest time" width="507" height="1100" loading="lazy"></div>
       </div>
 
-      <fieldset>
-        <legend>Who is this for? <span>Optional</span></legend>
-        <div class="chips">
-          <label class="chip"><input type="radio" name="signing_up_for" value="me"><span>Me</span></label>
-          <label class="chip"><input type="radio" name="signing_up_for" value="someone_else"><span>Someone I care about</span></label>
+      <div class="split feature feature-flip">
+        <div>
+          <p class="eyebrow">Money Back</p>
+          <h2>Watch your money come back</h2>
+          <p class="lead">Every bet-free day adds what you'd typically have lost to your Money Jar. Streaks and milestones keep you going.</p>
         </div>
-      </fieldset>
+        <div class="phone"><img src="screens/home.jpg" alt="The Money Back jar showing $107 kept, with days bet-free and best streak" width="507" height="1100" loading="lazy"></div>
+      </div>
 
-      <fieldset>
-        <legend>What do you want to quit? <span>Optional</span></legend>
-        <div class="chips">
-          <label class="chip"><input type="checkbox" name="betting_types" value="sportsbooks"><span>Sportsbooks</span></label>
-          <label class="chip"><input type="checkbox" name="betting_types" value="prediction_markets"><span>Prediction markets</span></label>
-          <label class="chip"><input type="checkbox" name="betting_types" value="casino_poker"><span>Casino or poker</span></label>
-          <label class="chip"><input type="checkbox" name="betting_types" value="other"><span>Something else</span></label>
+      <p class="fine center">Real app screens. The numbers are examples.</p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>A panic button</h3>
+          <p>When the urge hits: breathe, remember your why, and reach the person you picked.</p>
         </div>
-      </fieldset>
-
-      <label class="consent">
-        <input id="consent" type="checkbox" required>
-        <span>I'm 18 or older and Unbet can email me about the launch. I can ask to be removed at any time. <a href="privacy.html#waitlist">How we handle this</a></span>
-      </label>
-
-      <button id="submit" type="submit">Join the waitlist</button>
-      <p class="form-message" id="form-message" role="alert"></p>
-    </form>
-
-    <div class="success" id="success" tabindex="-1" hidden>
-      <h2>You're on the list.</h2>
-      <p>We'll email you when Unbet is ready. You don't have to wait until then to get support: the helpline below is free, any time.</p>
+        <div class="card">
+          <h3>A blocker <span class="status">In progress</span></h3>
+          <p>Lock sportsbooks and prediction markets on your iPhone. We're still building this one.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="card help">
-    <p><strong>Need help right now?</strong></p>
-    <p>Call or text <a href="tel:18006973738">1-800-MY-RESET</a>, or <a href="https://www.ncpgambling.org/help-treatment/chat/" rel="noopener">chat online</a>. The National Problem Gambling Helpline is free and confidential.</p>
-  </section>
-
-  <section>
-    <h2>What's it really costing you?</h2>
-    <div class="card calculator">
-      <label class="field-label" for="weekly">What you lose in a typical week</label>
-      <output class="weekly-value" id="weekly-value" for="weekly">$150</output>
-      <input id="weekly" type="range" min="10" max="1000" step="10" value="150">
-      <p class="year-total"><strong id="year-value">$7,800</strong> a year</p>
-      <p id="could-buy">That's about 4 months of rent, or 5 trips.</p>
-      <p class="fine">Rough US prices: rent $1,700 a month, a trip $1,500. This number stays on your device.</p>
+  <section class="section">
+    <div class="wrap narrow">
+      <h2 class="center">Questions</h2>
+      <div class="faq">
+        <details>
+          <summary>When can I get it?</summary>
+          <p>We don't have a date yet, because we're still finishing the app and going through Apple's approval. Join the waitlist and we'll email you when it's ready.</p>
+        </details>
+        <details>
+          <summary>Is it free?</summary>
+          <p>The waitlist is free. The app will have a free version and a paid plan, Unbet+, which includes the panic button and blocker. Crisis help is always free.</p>
+        </details>
+        <details>
+          <summary>Is my information private?</summary>
+          <p>What you enter in the app stays on your iPhone. For the waitlist, we keep your email and use it only for launch news. <a href="privacy.html#waitlist">Read how we handle it</a>.</p>
+        </details>
+        <details>
+          <summary>Is Unbet treatment?</summary>
+          <p>No. Unbet is a self-help tool, not medical care or a crisis service. For confidential support, call or text <a href="tel:18006973738">1-800-MY-RESET</a>.</p>
+        </details>
+        <details>
+          <summary>Is it on Android?</summary>
+          <p>Not yet. We're starting with iPhone.</p>
+        </details>
+      </div>
     </div>
   </section>
 
-  <section>
-    <h2>What we're building</h2>
-    <ul class="features">
-      <li><strong>Your real number.</strong> See what betting has cost you, and what that money could have been.</li>
-      <li><strong>Money Back.</strong> Watch the money you didn't bet add up, day after day.</li>
-      <li><strong>A panic button.</strong> For the moment the urge hits: breathe, remember your why, call someone.</li>
-      <li><strong>A blocker.</strong> Lock betting apps on your iPhone. <span class="status">Still in progress</span></li>
-    </ul>
+  <section class="section final">
+    <div class="wrap narrow center">
+      <h2>Your money's better off with you.</h2>
+      <p class="lead">Be first to know when Unbet is ready.</p>
+      <button class="btn btn-large" type="button" data-join>Join the waitlist</button>
+    </div>
   </section>
-
-  <nav class="links">
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms of Use</a>
-  </nav>
-
-  <footer>Questions? Email <a href="mailto:unbetapp@gmail.com">unbetapp@gmail.com</a></footer>
 </main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="card help">
+      <p><strong>Need help right now?</strong></p>
+      <p>Call or text <a href="tel:18006973738">1-800-MY-RESET</a>, or <a href="https://www.ncpgambling.org/help-treatment/chat/" rel="noopener">chat online</a>. The National Problem Gambling Helpline is free and confidential.</p>
+    </div>
+    <p class="footer-links"><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · <a href="mailto:unbetapp@gmail.com">unbetapp@gmail.com</a></p>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="sticky-cta">
+  <button class="btn btn-large" type="button" data-join>Join the waitlist</button>
+</div>
+
+<dialog id="join-dialog" aria-labelledby="join-title">
+  <button class="dialog-close" type="button" id="dialog-close" aria-label="Close">×</button>
+
+  <form id="waitlist-form" novalidate>
+    <h2 id="join-title">Join the waitlist</h2>
+    <p class="dialog-sub">We'll email you when Unbet is ready.</p>
+    <label class="visually-hidden" for="email">Your email</label>
+    <input id="email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" maxlength="254" placeholder="you@example.com" required>
+
+    <!-- A trap for spam bots: people never see this field, and bots tend to fill it in -->
+    <div class="trap" aria-hidden="true">
+      <label for="website">Leave this empty</label>
+      <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+    </div>
+
+    <button class="btn btn-large" id="submit" type="submit">Join the waitlist</button>
+    <p class="form-message" id="form-message" role="alert"></p>
+    <p class="fine">By joining, you confirm you're 18 or older and agree to launch emails from Unbet. You can ask to be removed at any time. <a href="privacy.html#waitlist">Privacy</a></p>
+  </form>
+
+  <div id="success" tabindex="-1" hidden>
+    <h2 class="success-title">You're on the list.</h2>
+    <p>We'll email you when Unbet is ready.</p>
+    <p>You don't have to wait to get support: <a href="tel:18006973738">1-800-MY-RESET</a> is free and confidential.</p>
+    <button class="btn btn-large" type="button" id="success-done">Done</button>
+  </div>
+</dialog>
+
 <script src="config.js"></script>
-<script src="waitlist.js"></script>
+<script src="waitlist.js?v=2"></script>
 </body>
 </html>
